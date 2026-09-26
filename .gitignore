@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/raw_telco_churn.csv
+outputs/*.csv
+outputs/*.json
+outputs/eda/*.png

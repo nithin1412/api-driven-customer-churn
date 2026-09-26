@@ -1,0 +1,19 @@
+name: api-driven-customer-churn
+prefect-version: ">=3.0,<4.0"
+
+build: null
+push: null
+
+pull:
+  - prefect.deployments.steps.set_working_directory:
+      directory: "{{ $PWD }}"
+
+deployments:
+  - name: customer-churn-cloud
+    entrypoint: flows/pipeline.py:customer_churn_pipeline
+    description: "Cloud-orchestrated customer churn DataOps pipeline"
+    work_pool:
+      name: assignment-cloud-pool
+    schedules:
+      - interval: 120
+        active: true
