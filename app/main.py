@@ -5,8 +5,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from prefect import get_client
-from prefect.client.schemas.objects import FlowRunFilter, DeploymentFilter, FlowFilter
-
+from prefect.client.schemas.filters import FlowRunFilter, DeploymentFilter, FlowFilter
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "outputs"
 
