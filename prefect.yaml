@@ -5,8 +5,13 @@ build: null
 push: null
 
 pull:
+  - prefect.deployments.steps.git_clone:
+      id: clone-step
+      repository: https://github.com/nithin1412/api-driven-customer-churn.git
+      branch: main
+
   - prefect.deployments.steps.set_working_directory:
-      directory: "{{ $PWD }}"
+      directory: "{{ clone-step.directory }}"
 
 deployments:
   - name: customer-churn-cloud
