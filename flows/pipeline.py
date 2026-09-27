@@ -26,7 +26,7 @@ EDA_DIR.mkdir(exist_ok=True)
 
 DATA_URL = os.getenv(
     "DATA_URL",
-    "https://raw.githubusercontent.com/IBM/employee-attrition-aif360/master/data/WA_Fn-UseC_-Telco-Customer-Churn.csv",
+    "https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv",
 )
 
 
